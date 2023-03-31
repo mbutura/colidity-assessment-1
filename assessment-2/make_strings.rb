@@ -1,3 +1,5 @@
+require 'pry'
+
 def merge_strings(str1, str2)
     #initialise tracking variable
     overlap = 0
@@ -10,5 +12,4 @@ def merge_strings(str1, str2)
     str1 + str2[overlap..-1]
   end
   
-  #Use binding.pry
   binding.pry

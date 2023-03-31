@@ -14,23 +14,20 @@ NOTE: The algorithm should always use the longest possible overlap.
 
 "abaabaab" + "aabaabab" would be "abaabaabab" and not "abaabaabaabab"
 
-## Approach
-
 We will be utilising sliding window for this. Sliding window is a common approach in string search and also in more
 complex aspects such as data analysis(Multiply-accumulate moving Average filters), and in Digital signal processing
 for cross-correlation / auto-correlation measures to find correlations between two signal vectors (arrays).
 
-def merge_strings(str1, str2)
-    #initialise overlap tracking variable
-    overlap = 0
-    #loop from 1..min(str1, str2), inclusive of final value
-    (1..[str1.length, str2.length].min).each do |i|
-      # Reverse one string and perform mutual sliding window to find overlap
-      overlap = i if str1[-i..-1] == str2[0...i]
-    end
-    #merge results
-    str1 + str2[overlap..-1]
-  end
-  
-  #Use binding.pry
-  binding.pry
+## Steps
+
+In the project directory, you can run:
+
+```bundle install```
+
+Drop into a REPL
+
+```irb make_strings.rb```
+
+Try the merge strings function
+
+```[1] pry(main)> 'merge_strings("abaabaab", "aabaabab") ```
